@@ -1,0 +1,135 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+:root {
+	--color-primary: blue;
+	--color-secondary: #c00;
+}
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+
+
+@media screen and (width >= 1280px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+}
+
+
+
+
+.navbar.navbar-expand-lg {
+	width: 1280px;
+	gap: 30px;
+	margin-left: -256px;
+}
+
+.nav-item1 {
+	margin-left: 30px;
+}
+
+.nav-item2 {
+	margin-left: 30px;
+}
+
+.nav-item3 {
+	margin-left: 30px;
+}
+
+
+.nav-link.active {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+h1 {
+	font-family: Archivo;
+	font-size: 40px;
+	color: #146C43;
+	margin-top: 64px;
+	margin-left: -140px;
+}
+
+
+h1 {
+	position: absolute;
+  }
+  
+h1::after {
+	content: " ";
+	display: block;
+	border-bottom: 3px solid #146C43;
+	width: 1048px; 
+	position: absolute;
+	top: 50px;
+	justify-content: center;
+
+  }
+
+  p {
+	font-family: Roboto;
+  }
+
+.p1 {
+	position: absolute;
+	margin-top: 140px;
+	margin-left: 150px;
+}
+
+.btn.btn-success {
+	margin-top: 135px;
+	margin-left: 220px;
+}
+
+
+
+.p2 {
+	margin-top: -30px;
+	margin-left: 430px;
+}
+
+.dropdown {
+	margin-top: -48px;
+	margin-left: 545px;
+}
+
+.card.mb-3 {
+	margin-top: 20px;
+}
+
+.img-fluid.rounded-start {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+	padding-right: 10px;
+}
+
+.btn.btn-outline-success {
+	margin-left: 900px;
+}
+
+
+
+/* This uses the same value as --size-xs. */
+@media screen and (width >= 320px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 768px;
+	}
+}
