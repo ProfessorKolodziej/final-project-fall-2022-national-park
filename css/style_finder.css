@@ -1,0 +1,329 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+:root {
+	--color-primary: blue;
+	--color-secondary: #c00;
+}
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+
+/* This uses the same value as --size-xs. */
+
+
+
+@media screen and (width >= 320px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 768px;
+	}
+
+html {	
+	margin: 0;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+
+body{
+	background-image: url('images/Rectangle-175.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+nav {
+	width: 100%;
+}
+.navbar.navbar-expand-lg {
+	width: 100%; 
+	max-width: 768px;
+	padding-left: 30px;
+	gap: 30px;
+	position: fixed;
+	top: 0;
+	z-index: 100; /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+	height: 55px;
+}
+
+svg {
+	margin-left: -30px;
+	margin-top: -5px;
+}
+
+
+strong {
+	font-size: 19px;
+	font-family: Archivo;
+	position: center center;
+	margin-top: 0px;
+	margin-left: -35px;
+	font-weight: 800px;
+}
+
+.navbar-toggler {
+	border-color: lightgray;
+	background-color: white;
+	size: 50%;
+}
+
+.navbar-toggler-icon {
+	font-size: 1rem; 
+}
+
+.navbar-collapse {
+	background-color: #146C43; /* Change this to your desired color */
+}
+
+
+.nav-item1 {
+	margin-left: 30px;
+}
+
+.nav-item2 {
+	margin-left: 30px;
+}
+
+.nav-item3 {
+	margin-left: 30px;
+}
+
+
+.nav-link.active {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+h1 {
+	font-family: Archivo;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	color: #146C43;
+	margin-top: -20px;
+	margin-left: 26px;
+	width: 100px;
+
+}
+
+
+h1 {
+	position: absolute;
+  }
+  
+h1::after {
+	content: " ";
+	display: block;
+	border-bottom: 3px solid #146C43;
+	width: 270px; 
+	position: absolute;
+	top: 22px;
+	justify-content: center;
+  }
+
+h2 {
+	font-family: Archivo;
+	font-size: 18px;
+	color: #146C43;
+	padding-bottom: 5px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-top: 100px;
+	padding-top: 20px;
+	margin-left: 15px;
+	margin-right: 10px;
+	width: 290px;
+  }
+
+
+.list-group-2{
+	margin-top: 10px;
+}
+.list-group-3 {
+	margin-top: 10px;
+}
+
+.list-group-4 {
+	margin-top: 10px;
+}
+
+  .btn.btn-success {
+	margin-left: 140px;
+	margin-top: 30px;
+  }
+.btn.btn-outline-success {
+	margin-top: 30px;
+	margin-left: 10px;
+}
+}
+
+
+@media screen and (width >= 1194px) {
+	.content-container {
+		margin: 0 auto;
+	}
+
+	html { 
+		margin: 0;
+		padding-bottom: 50px;
+	}
+   
+
+   
+	strong {
+		display: none;
+	}
+
+	.navbar.navbar-expand-lg {
+        padding-left: 30px;
+        gap: 30px;
+        top: 0;
+        z-index: 100;  /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+		padding-right: 2000px;
+	}
+
+   svg {
+	margin-left: 0px;
+   }
+
+	.nav-item1 {
+		margin-left: 20px;
+	}
+   
+	.nav-item2 {
+		margin-left: 30px;
+	}
+   
+	.nav-item3 {
+		margin-left: 30px;
+	}
+   
+   
+	.nav-link.active {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+   
+   .navbar-toggler {
+		display: none;
+   }
+
+
+
+	h1 {
+		font-family: Archivo;
+		font-size: 40px;
+		color: #146C43;
+		margin-top: -60px;
+		margin-left: 116px;
+	}
+   
+   
+	h1 {
+		position: absolute;
+	  }
+	 
+	h1::after {
+		content: " ";
+		display: block;
+		border-bottom: 3px solid #146C43;
+		width: 964px;
+		position: absolute;
+		top: 50px;
+		justify-content: center;
+	  }
+   
+	h2 {
+		font-family: Archivo;
+		font-size: 32px;
+		color: #146C43;
+	}
+	  .container {
+		width: 900px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 180px;
+		margin-top: 180px;
+		padding-top: 20px;
+		margin-left: -65px;
+	  }
+	.list-group-2 {
+		margin-top:3px;
+	}
+	  .list-group-3 {
+		margin-top: -270px;
+	  }
+   
+	  .list-group-4 {
+		margin-top: 15px;
+	  }
+   
+	  .btn.btn-success {
+		margin-left: 883px;
+		margin-top: 30px;
+	  }
+	.btn.btn-outline-success {
+		margin-top: 30px;
+		margin-left: 10px;
+	}
+
+}
+
+
+@media screen and (width >= 1280px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+ 
+	h1::after {
+		content: " ";
+		display: block;
+		border-bottom: 3px solid #146C43;
+		width: 1048px;
+		position: absolute;
+		top: 50px;
+		justify-content: center;
+	  }
+
+	.container {
+		margin-left: 185px;
+	}
+
+	.btn.btn-success {
+		margin-left: 920px;
+	}
+
+
+
+
+
+}
+ 
+
+
+
+

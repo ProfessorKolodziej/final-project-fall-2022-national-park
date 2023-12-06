@@ -1,0 +1,167 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+:root {
+	--color-primary: blue;
+	--color-secondary: #c00;
+}
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+
+
+/* This uses the same value as --size-xs. */
+@media screen and (width >= 320px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 768px;
+	}
+
+
+body { 
+	background: url('images/stephen-meyers-U43H95kjhog-unsplash.jpg'), lightgray 50% / cover no-repeat;
+	background-color: rgba(0, 50, 30, 0.85);
+	background-blend-mode: overlay;
+	background-size: 400%;                      
+    background-repeat:   no-repeat;
+    background-position: center center;     
+	margin: 0;
+ }
+ 
+ 
+ h1 {
+	font-family: Archivo;
+	color: white;
+	font-size: 24px;
+	margin-top: 250px;
+	margin-left: 20px;
+	font-weight: 700;
+ }
+ 
+ 
+ 
+ 
+ .btn-success {
+	margin-left: 20px;
+	background-color: white;
+	color: #28a745;
+	border-color: #28a745;
+	font-size: 12px;
+	margin-top: -2px;
+  }
+ 
+ 
+ 
+ 
+ h3 {
+	font-family: Archivo;
+	color: white;
+	margin-left: 20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	font-size: 16px;
+ }
+ 
+	   
+}
+
+@media screen and (width >= 1194px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1194px;
+	}
+ 
+body { 
+	background-size: 150%;                      
+}
+
+ 
+ h1 {
+	font-size: 78px;
+	margin-top: 308px;
+	margin-left: 104px;
+ }
+ 
+ 
+ 
+ 
+ .btn-success {
+	margin-left: 104px;
+	font-size: 16px;
+  }
+ 
+ 
+ 
+ 
+ h3 {
+	font-family: Archivo;
+	color: white;
+	margin-left: 104px;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	font-size: 28px;
+ }
+ 
+ 
+ }
+ 
+
+
+ @media screen and (width >= 1280px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+ 
+ 
+ 
+ h1 {
+	font-family: Archivo;
+	color: white;
+	font-size: 78px;
+	margin-top: 310px;
+	margin-left: 122px;
+	font-weight: 700;
+ }
+ 
+ 
+ 
+ 
+ .btn-success {
+	margin-left:122px;
+	background-color: white;
+	color: #28a745;
+	border-color: #28a745;
+	font-size: 18px;
+  }
+ 
+ 
+ 
+ 
+ h3 {
+	font-family: Archivo;
+	color: white;
+	margin-left: 122px;
+	margin-top: -10px;
+	margin-bottom: 20px;
+	font-size: 28px;
+ }
+ 
+ 
+
+}
+ 
+ 
