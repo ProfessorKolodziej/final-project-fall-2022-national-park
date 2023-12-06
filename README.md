@@ -7,7 +7,7 @@ Please add a brief description of your final project here.
 ## Project Documentation
 
 - [CM523 Final Project Guidelines &amp; Schedule](https://docs.google.com/document/d/1gvG9_1XYfp5-BVUgCDL9JDaZ3Acm6hHP7lDF3MqXPzY/edit#heading=h.61wsleacz62i)
-- **Final code demo:** [Update this to show your Github Pages URL](https://professorkolodziej.github.io/cm523-final-project/). The URL will be `https://professorkolodziej.github.io/YOUR-REPOSITORY-NAME/`.
+- **Final code demo:** [Update this to show your Github Pages URL](https://professorkolodziej.github.io/cm523-final-project/). The URL will be `https://professorkolodziej.github.io/final-project-fall-2022-national-park/`.
 - Add any links to wireframes, mockups, your presentation, etc. here in a list so it is easy for you to find later.
 
 ## How to Use This Repository
