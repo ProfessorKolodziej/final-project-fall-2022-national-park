@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,34 +14,44 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Roboto:wght@300;700&display=swap');
 		</style>		
-	<title>National Park Finder Results</title>
+	<title>National Park Finder - Results</title>
 	<!--
 		This is where you should link your CSS file.
 	-->
 </head>
-
 <body>
-	<main class="content-container">
-		<nav class="navbar navbar-expand-lg" style="background-color: #146C43;">
-			<div class="container-fluid">
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-tree-fill" viewBox="0 0 16 16">
-					<path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z"/>
-				  </svg>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item1">
-							<a class="nav-link" href="#" style="color: white;">About</a>
-						</li>
-						<li class="nav-item2">
-							<a class="nav-link active" aria-current="page" href="#" style="color: white;">Finder</a>
-						</li>
-						<li class="nav-item3">
-							<a class="nav-link" href="#" style="color: white;">Contact</a>
-						</li>
-					</ul>
-				</div>
+	<nav class="navbar navbar-expand-lg" style="background-color: #146C43;">
+		<div class="container-fluid">
+			<a href="index.html" style="color: white">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-tree-fill"
+					viewBox="0 0 16 16">
+					<path
+						d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z" />
+				</svg>
+			</a>
+			<strong style="color: white;"> National Park Finder </strong>
+	
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item1">
+						<a class="nav-link" href="index_about.html" style="color: white;">About</a>
+					</li>
+					<li class="nav-item2">
+						<a class="nav-link active" aria-current="page" href="index_finder.html"
+							style="color: white;">Finder</a>
+					</li>
+					<li class="nav-item3">
+						<a class="nav-link" href="index_contact.html" style="color: white;">Contact</a>
+					</li>
+				</ul>
 			</div>
-		</nav>
+		</div>
+	</nav>
+	
 		<h1>Results</h1>
 		<p class="p1">Sort By: </p>
 		<div class="btn-group" role="group">
@@ -46,22 +59,63 @@
 			<button type="button" class="btn btn-success">Popularity</button>
 		</div>
 		<p class="p2">Filter By State: </p>
-		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  Dropdown button
-			</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			  <a class="dropdown-item" href="#">Action</a>
-			  <a class="dropdown-item" href="#">Another action</a>
-			  <a class="dropdown-item" href="#">Something else here</a>
+		  <div class="container">
+			<div class="row">
+			  <div class="col mt-4">
+				<div class="dropdown">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Select State
+				  </button>
+				  <div class="dropdown-menu scrollable-dropdown" aria-labelledby="dropdownMenuButton">
+					   <a class="dropdown-item" href="#">No Preference</a>
+						<a class="dropdown-item" href="#">Alaska</a>
+						<a class="dropdown-item" href="#">American Samoa</a>
+						<a class="dropdown-item" href="#">Arizona</a>
+						<a class="dropdown-item" href="#">Arkansas</a>
+						<a class="dropdown-item" href="#">California</a>
+						<a class="dropdown-item" href="#">Colorado</a>
+						<a class="dropdown-item" href="#">Florida</a>
+						<a class="dropdown-item" href="#">Hawaii</a>
+						<a class="dropdown-item" href="#">Idaho</a>
+						<a class="dropdown-item" href="#">Indiana</a>
+						<a class="dropdown-item" href="#">Kentucky</a>
+						<a class="dropdown-item" href="#">Maine</a>
+						<a class="dropdown-item" href="#">Michigan</a>
+						<a class="dropdown-item" href="#">Minnesota</a>
+						<a class="dropdown-item" href="#">Missouri</a>
+						<a class="dropdown-item" href="#">Montana</a>
+						<a class="dropdown-item" href="#">Nevada</a>
+						<a class="dropdown-item" href="#">New Mexico</a>
+						<a class="dropdown-item" href="#">North Carolina</a>
+						<a class="dropdown-item" href="#">North Dakota</a>
+						<a class="dropdown-item" href="#">Ohio</a>
+						<a class="dropdown-item" href="#">Oregon</a>
+						<a class="dropdown-item" href="#">Nouth Carolina</a>
+						<a class="dropdown-item" href="#">North Dakota</a>
+						<a class="dropdown-item" href="#">Ohio</a>
+						<a class="dropdown-item" href="#">Oregon</a>
+						<a class="dropdown-item" href="#">South Carolina</a>
+						<a class="dropdown-item" href="#">South Dakota</a>
+						<a class="dropdown-item" href="#">Tennessee</a>
+						<a class="dropdown-item" href="#">Texas</a>
+						<a class="dropdown-item" href="#">Utah</a>
+						<a class="dropdown-item" href="#">Virgin Islands</a>
+						<a class="dropdown-item" href="#">Virginia</a>
+						<a class="dropdown-item" href="#">Washington</a>
+						<a class="dropdown-item" href="#">West Virginia</a>
+						<a class="dropdown-item" href="#">Wyoming</a>
+				
+				  
+					 </div>        
+			  </div>
 			</div>
 		  </div>
+		</div>
 
-
-		<div class="card mb-3" style="width: 800px;">
+		<div class="card mb-3">
 			<div class="row g-0">
 			<div class="col-md-4">
-				<img src="https://images.unsplash.com/photo-1584986643223-a3676d817c4a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGFjYWRpYSUyMG5hdGlvbmFsJTIwcGFya3xlbnwwfHwwfHx8MA%3D%3D" class="img-fluid rounded-start" alt="...">
+				<img src="images/Acadia-national-park.jpeg" class="img-fluid rounded-start" alt="...">
 			</div>
 			<div class="col-md-8">
 				<div class="card-body">
@@ -81,8 +135,11 @@
 	<!--
 		This is where you should link your JS file.
 	-->
-	<a href="index_finder.html" button type="button" class="btn btn-outline-success"> Go Back </button>
+	<a href="index_finder.html" button type="button" class="btn btn-outline-success"> Go to Finder </button>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
-
 </html>

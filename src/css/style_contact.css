@@ -1,0 +1,367 @@
+/*
+CSS controls the styling of the page.
+You can write a color in directly, or use variables.
+Try changing the color from blue to red in the
+primary color variable below.
+*/
+
+:root {
+	--color-primary: blue;
+	--color-secondary: #c00;
+}
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+
+@media screen and (width >= 1280px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+
+strong {
+	display: none;
+}
+.navbar.navbar-expand-lg {
+	padding-left: 30px;
+	gap: 30px;
+	z-index: 100; /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+}
+
+.nav-item1 {
+	margin-left: 30px;
+}
+
+.nav-item2 {
+	margin-left: 30px;
+}
+
+.nav-item3 {
+	margin-left: 30px;
+}
+
+
+.nav-link.active {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+
+
+h1 {
+	font-family: Archivo;
+	font-size: 40px;
+	color: #146C43;
+	margin-top: 64px;
+	margin-left: 116px;
+}
+
+
+h1 {
+	position: absolute;
+  }
+  
+h1::after {
+	content: " ";
+	display: block;
+	border-bottom: 3px solid #146C43;
+	width: 1048px; 
+	position: absolute;
+	top: 50px;
+	justify-content: center;
+
+  }
+
+
+  .btn.btn-outline-success {
+	margin-top: -50px;
+	margin-left: 300px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+  }
+
+.content-container-text {
+	margin-top: 300px;
+	margin-left: -100px;
+	width: 450px;
+}
+
+img {
+	width: 450px;
+	margin-top: 200px;
+}
+
+.btn.btn-outline-success {
+	margin-left: 500px;
+	margin-top: -100px;
+}
+}
+
+p {
+	margin-left: 200px;
+	width: 400px;
+	margin-top: -60px;
+}
+.p2{
+	margin-top: 0px;
+}
+.p3{
+	margin-top: -15px;
+}
+
+@media screen and (width = 1194px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1194px;
+	}
+
+	strong {
+		display: none;
+	}
+
+	.navbar.navbar-expand-lg {
+		padding-left: 30px;
+		gap: 30px;
+		z-index: 100; /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+	}
+	
+	.nav-item1 {
+		margin-left: 30px;
+	}
+	
+	.nav-item2 {
+		margin-left: 30px;
+	}
+	
+	.nav-item3 {
+		margin-left: 30px;
+	}
+	
+	
+	.nav-link.active {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+	
+	
+	
+	
+	h1 {
+		font-family: Archivo;
+		font-size: 40px;
+		color: #146C43;
+		margin-top: 64px;
+		margin-left: 116px;
+	}
+	
+	
+	h1 {
+		position: absolute;
+	  }
+	  
+	h1::after {
+		content: " ";
+		display: block;
+		border-bottom: 3px solid #146C43;
+		width: 962px; 
+		position: absolute;
+		top: 50px;
+		justify-content: center;
+	
+	  }
+	
+	
+	  .btn.btn-outline-success {
+		margin-top: -50px;
+		margin-left: 300px;
+	}
+	
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+	  }
+	
+	.content-container-text {
+		margin-top: 300px;
+		margin-left: -100px;
+		width: 450px;
+	}
+	
+
+	img {
+		width: 450px;
+		margin-top: 200px;
+	}
+	
+	.btn.btn-outline-success {
+		margin-left: 500px;
+		margin-top: -80px;
+	}
+
+	p {
+		margin-left: 120px;
+		margin-top: -30px;
+	}
+
+}
+
+
+
+/* This uses the same value as --size-xs. */
+@media screen and (width = 320px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 320px;
+	}
+
+	html {	
+		margin: 0;
+		padding-bottom: 50px;
+		box-sizing: border-box;
+		width: 320px;
+		margin-top: 130px;
+	}
+	
+	
+	body{
+		margin: 0;
+		box-sizing: border-box;
+		width: 320px;
+	}
+	
+	nav {
+		width: 320px;
+	}
+	.navbar.navbar-expand-lg {
+		width: 100%; 
+		max-width: 320px;
+		padding-left: 30px;
+		gap: 30px;
+		position: fixed;
+		top: 0;
+		z-index: 100; /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+		height: 55px;
+	}
+	
+	svg {
+		margin-left: -30px;
+		margin-top: -5px;
+	}
+	
+	
+	strong {
+		font-size: 19px;
+		font-family: Archivo;
+		position: center center;
+		margin-top: 0px;
+		margin-left: -35px;
+		font-weight: 800px;
+	}
+	
+	.navbar-toggler {
+		border-color: lightgray;
+		background-color: white;
+		size: 50%;
+	}
+	
+	.navbar-toggler-icon {
+		font-size: 1rem; 
+	}
+	
+	.navbar-collapse {
+		background-color: #146C43; /* Change this to your desired color */
+	}
+	
+	
+	.nav-item1 {
+		margin-left: 30px;
+	}
+	
+	.nav-item2 {
+		margin-left: 30px;
+	}
+	
+	.nav-item3 {
+		margin-left: 30px;
+	}
+	
+	
+	.nav-link.active {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+
+	img {
+		width: 265px;
+		margin-top: 30px;
+		margin-left: 13px;
+	}
+
+	body {
+		margin-top: 50px;
+	}
+
+	h1 {
+		font-family: Archivo;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		color: #146C43;
+		margin-left: 26px;
+		width: 100px;
+		margin-top: -50px;
+	}
+	
+	
+	h1 {
+		position: absolute;
+	  }
+	  
+	h1::after {
+		content: " ";
+		display: block;
+		border-bottom: 3px solid #146C43;
+		width: 270px; 
+		position: absolute;
+		top: 22px;
+		justify-content: center;
+	  }
+
+	.p1{
+		margin-left: 15px;
+		margin-right: 15px;
+		width: 270px;
+	}
+
+	.p2 {
+		margin-left: 15px;
+		margin-top: -40px;
+	}
+
+	.p3 {
+		margin-left: 15px;
+		margin-top: -15px;
+	}
+
+	.btn.btn-outline-success {
+		margin-top: 20px;
+		margin-left: 230px;
+	}
+	
+}

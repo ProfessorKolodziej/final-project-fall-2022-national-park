@@ -22,28 +22,77 @@ to help you out.
 	--size-xl: 1200px;
 */
 
-@media screen and (width >= 1280px) {
+/* This uses the same value as --size-xs. */
+
+
+
+@media screen and (width >= 320px) {
 	.content-container {
 		margin: 0 auto;
-		max-width: 1280px;
+		max-width: 768px;
 	}
-}
 
 html {	
-	background: url('https://images.unsplash.com/photo-1595970280024-b8bdf07bef53?q=80&w=2448&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'), lightgray 50% / cover no-repeat;
-	background-color: rgba(255, 255, 255, 0.7);
-	background-blend-mode: overlay;
-	background-size: cover; 
-	background-repeat: no-repeat;
 	margin: 0;
 	padding-bottom: 50px;
+	box-sizing: border-box;
+	width: 100%;
 }
 
 
+body{
+	background-image: url('images/Rectangle-175.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+nav {
+	width: 100%;
+}
 .navbar.navbar-expand-lg {
+	width: 100%; 
+	max-width: 768px;
 	padding-left: 30px;
 	gap: 30px;
+	position: fixed;
+	top: 0;
+	z-index: 100; /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+	height: 55px;
 }
+
+svg {
+	margin-left: -30px;
+	margin-top: -5px;
+}
+
+
+strong {
+	font-size: 19px;
+	font-family: Archivo;
+	position: center center;
+	margin-top: 0px;
+	margin-left: -35px;
+	font-weight: 800px;
+}
+
+.navbar-toggler {
+	border-color: lightgray;
+	background-color: white;
+	size: 50%;
+}
+
+.navbar-toggler-icon {
+	font-size: 1rem; 
+}
+
+.navbar-collapse {
+	background-color: #146C43; /* Change this to your desired color */
+}
+
 
 .nav-item1 {
 	margin-left: 30px;
@@ -66,10 +115,15 @@ html {
 
 h1 {
 	font-family: Archivo;
-	font-size: 40px;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
 	color: #146C43;
-	margin-top: 64px;
-	margin-left: 116px;
+	margin-top: -20px;
+	margin-left: 26px;
+	width: 100px;
+
 }
 
 
@@ -81,41 +135,195 @@ h1::after {
 	content: " ";
 	display: block;
 	border-bottom: 3px solid #146C43;
-	width: 1048px; 
+	width: 270px; 
 	position: absolute;
-	top: 50px;
+	top: 22px;
 	justify-content: center;
-
   }
 
-  .container {
+h2 {
+	font-family: Archivo;
+	font-size: 18px;
+	color: #146C43;
+	padding-bottom: 5px;
+}
+
+.container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 180px;
-	margin-top: 180px;
+	grid-template-columns: 1fr;
+	margin-top: 100px;
+	padding-top: 20px;
+	margin-left: 15px;
+	margin-right: 10px;
+	width: 290px;
   }
 
-  .list-group-3 {
-	margin-top: -270px;
-  }
 
-  .list-group-4 {
-	margin-top: 15px;
-  }
+.list-group-2{
+	margin-top: 10px;
+}
+.list-group-3 {
+	margin-top: 10px;
+}
+
+.list-group-4 {
+	margin-top: 10px;
+}
 
   .btn.btn-success {
-	margin-left: 735px;
+	margin-left: 140px;
 	margin-top: 30px;
   }
 .btn.btn-outline-success {
 	margin-top: 30px;
 	margin-left: 10px;
 }
+}
 
-/* This uses the same value as --size-xs. */
-@media screen and (width >= 320px) {
+
+@media screen and (width >= 1194px) {
 	.content-container {
 		margin: 0 auto;
-		max-width: 768px;
 	}
+
+	html { 
+		margin: 0;
+		padding-bottom: 50px;
+	}
+   
+
+   
+	strong {
+		display: none;
+	}
+
+	.navbar.navbar-expand-lg {
+        padding-left: 30px;
+        gap: 30px;
+        top: 0;
+        z-index: 100;  /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+		padding-right: 2000px;
+	}
+
+   svg {
+	margin-left: 0px;
+   }
+
+	.nav-item1 {
+		margin-left: 20px;
+	}
+   
+	.nav-item2 {
+		margin-left: 30px;
+	}
+   
+	.nav-item3 {
+		margin-left: 30px;
+	}
+   
+   
+	.nav-link.active {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+   
+   .navbar-toggler {
+		display: none;
+   }
+
+
+
+	h1 {
+		font-family: Archivo;
+		font-size: 40px;
+		color: #146C43;
+		margin-top: -60px;
+		margin-left: 116px;
+	}
+   
+   
+	h1 {
+		position: absolute;
+	  }
+	 
+	h1::after {
+		content: " ";
+		display: block;
+		border-bottom: 3px solid #146C43;
+		width: 964px;
+		position: absolute;
+		top: 50px;
+		justify-content: center;
+	  }
+   
+	h2 {
+		font-family: Archivo;
+		font-size: 32px;
+		color: #146C43;
+	}
+	  .container {
+		width: 900px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 180px;
+		margin-top: 180px;
+		padding-top: 20px;
+		margin-left: -65px;
+	  }
+	.list-group-2 {
+		margin-top:3px;
+	}
+	  .list-group-3 {
+		margin-top: -270px;
+	  }
+   
+	  .list-group-4 {
+		margin-top: 15px;
+	  }
+   
+	  .btn.btn-success {
+		margin-left: 883px;
+		margin-top: 30px;
+	  }
+	.btn.btn-outline-success {
+		margin-top: 30px;
+		margin-left: 10px;
+	}
+
 }
+
+
+@media screen and (width >= 1280px) {
+	.content-container {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+ 
+	h1::after {
+		content: " ";
+		display: block;
+		border-bottom: 3px solid #146C43;
+		width: 1048px;
+		position: absolute;
+		top: 50px;
+		justify-content: center;
+	  }
+
+	.container {
+		margin-left: 185px;
+	}
+
+	.btn.btn-success {
+		margin-left: 920px;
+	}
+
+
+
+
+
+}
+ 
+
+
+
+
