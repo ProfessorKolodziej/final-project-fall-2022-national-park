@@ -13,12 +13,13 @@
 	<link rel="stylesheet" href="css/style_results.css">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Roboto:wght@300;700&display=swap');
-		</style>		
+	</style>
 	<title>National Park Finder - Results</title>
 	<!--
 		This is where you should link your CSS file.
 	-->
 </head>
+
 <body>
 	<nav class="navbar navbar-expand-lg" style="background-color: #146C43;">
 		<div class="container-fluid">
@@ -30,7 +31,7 @@
 				</svg>
 			</a>
 			<strong style="color: white;"> National Park Finder </strong>
-	
+
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -51,23 +52,24 @@
 			</div>
 		</div>
 	</nav>
-	
-		<h1>Results</h1>
-		<p class="p1">Sort By: </p>
-		<div class="btn-group" role="group">
-			<button type="button" class="btn btn-success">Alphabet</button>
-			<button type="button" class="btn btn-success">Popularity</button>
-		</div>
-		<p class="p2">Filter By State: </p>
-		  <div class="container">
-			<div class="row">
-			  <div class="col mt-4">
+
+	<h1>Results</h1>
+	<p class="p1">Sort By: </p>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-success sort-item">Alphabet</button>
+		<button type="button" class="btn btn-success sort-item">Popularity</button>
+	</div>
+	<p class="p2">Filter By State: </p>
+	<div class="container">
+		<div class="row">
+			<div class="col mt-4">
 				<div class="dropdown">
-				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Select State
-				  </button>
-				  <div class="dropdown-menu scrollable-dropdown" aria-labelledby="dropdownMenuButton">
-					   <a class="dropdown-item" href="#">No Preference</a>
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Select State
+					</button>
+					<div class="dropdown-menu scrollable-dropdown" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="#">No Preference</a>
 						<a class="dropdown-item" href="#">Alaska</a>
 						<a class="dropdown-item" href="#">American Samoa</a>
 						<a class="dropdown-item" href="#">Arizona</a>
@@ -90,10 +92,6 @@
 						<a class="dropdown-item" href="#">North Dakota</a>
 						<a class="dropdown-item" href="#">Ohio</a>
 						<a class="dropdown-item" href="#">Oregon</a>
-						<a class="dropdown-item" href="#">Nouth Carolina</a>
-						<a class="dropdown-item" href="#">North Dakota</a>
-						<a class="dropdown-item" href="#">Ohio</a>
-						<a class="dropdown-item" href="#">Oregon</a>
 						<a class="dropdown-item" href="#">South Carolina</a>
 						<a class="dropdown-item" href="#">South Dakota</a>
 						<a class="dropdown-item" href="#">Tennessee</a>
@@ -104,42 +102,185 @@
 						<a class="dropdown-item" href="#">Washington</a>
 						<a class="dropdown-item" href="#">West Virginia</a>
 						<a class="dropdown-item" href="#">Wyoming</a>
-				
-				  
-					 </div>        
-			  </div>
-			</div>
-		  </div>
-		</div>
 
-		<div class="card mb-3">
-			<div class="row g-0">
-			<div class="col-md-4">
-				<img src="images/Acadia-national-park.jpeg" class="img-fluid rounded-start" alt="...">
-			</div>
-			<div class="col-md-8">
-				<div class="card-body">
-				<h5 class="card-title">Acadia National Park</h5>
-				<p class="card-text">
-					Location:</br>
-					Weather:</br>
-					Activities:</br>
-					Features:</br>
-					Popularity:</p>
-				<p class="card-text"><small class="text-muted">Learn more at: https://www.nps.gov/acad/index.htm</small></p>
+
+					</div>
 				</div>
 			</div>
-			</div>
 		</div>
-	</main>
-	<!--
+	</div>
+
+	<ul id="data" class="data-list"></ul>
+	<a href="index_finder.html" style="margin-bottom: 20px;" button type="button" class="btn btn-outline-success"> Go to
+		Finder </button>
+		<!--
 		This is where you should link your JS file.
 	-->
-	<a href="index_finder.html" button type="button" class="btn btn-outline-success"> Go to Finder </button>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script>
+			let cacheData = [];
+			let sortByItem = 'Alphabet';
+			let stateItem = '';
+			const API_KEY = 'patS83q6RSl9KNdyZ.d8088ef80bfa94b02c2d37b371772dbbd4ba5abd1705d08b896a0dc02803268f';
+			const baseId = 'appDHQmidjTV522ws';
+			const tableId = 'tblNNuWsHyOBLQhSX';
+			const apiUrl = `https://api.airtable.com/v0/appDHQmidjTV522ws/Projects`;
+			
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			async function fetchAndDisplayResults() {
+    try {
+        const storedFilters = JSON.parse(localStorage.getItem('parkFilters')) || {};
+        let orFilters = [];
+        let andFilters = [];
+
+        ['Activities', 'Features', 'Popularity'].forEach(category => {
+            let categoryFilters = [];
+            for (let item in storedFilters[category]) {
+                if (storedFilters[category][item]) {
+                    categoryFilters.push(`FIND('${item}', {${category}})`);
+                }
+            }
+            if (categoryFilters.length) {
+                orFilters.push(`OR(${categoryFilters.join(', ')})`);
+            }
+        });
+
+        for (let item in storedFilters['LocationClimate']) {
+            if (storedFilters['LocationClimate'][item]) {
+                andFilters.push(`FIND('${item}', {LocationClimate})`);
+            }
+        }
+
+        let requestUrl = apiUrl;
+        let combinedFilters = [...orFilters, ...andFilters];
+        if (combinedFilters.length) {
+            requestUrl = `${apiUrl}?filterByFormula=AND(${combinedFilters.join(', ')})`;
+        }
+
+        const response = await fetch(requestUrl, {
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${API_KEY}`
+            },
+            method: 'GET',
+            mode: 'cors',
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        data.records.forEach((v) => {
+                       let popularityVal = v.fields.Popularity[0];
+
+                       if (popularityVal == 'Very Popular') {
+                           v.popularityVal = 3;
+                       }
+                       if (popularityVal == 'Somewhat Popular') {
+                           v.popularityVal = 2;
+                       }
+                       if (popularityVal == 'Less Crowded') {
+                           v.popularityVal = 1;
+                       }
+
+
+                       })
+
+        cacheData = data.records;
+        displayResults({ records: data.records });
+
+    } catch (error) {
+        console.error('Error fetching and displaying results:', error);
+    }
+}
+
+fetchAndDisplayResults();
+
+			function displayResults(data) {
+				const $dataContainer = document.querySelector("#data");
+				$('#data').html('');
+				data.records.forEach(record => {
+					const card = buildCard(record);
+					$dataContainer.appendChild(card);
+				});
+			}
+
+			function buildCard(record) {
+				const card = document.createElement('li'),
+					ParkName = document.createElement('h5'),
+					LocationClimate = document.createElement('p'),
+					Activities = document.createElement('p'),
+					Features = document.createElement('p'),
+					Popularity = document.createElement('p'),
+					image = document.createElement('img');
+				card.classList = "card-item";
+				ParkName.innerText = record.fields['ParkName'];
+				LocationClimate.innerText = "Location/Climate: " + record.fields['LocationClimate'];
+				Activities.innerText = "Activities: " + record.fields['Activities'];
+				Features.innerText = "Features: " + record.fields['Features'];
+				Popularity.innerText = "Popularity: " + record.fields['Popularity'];
+				image.src = record.fields['Image'] ? record.fields['Image'][0].url : '';
+
+				card.appendChild(image);
+				let rightDiv = document.createElement('div')
+				rightDiv.classList = 'card-right';
+				rightDiv.appendChild(ParkName);
+				rightDiv.appendChild(LocationClimate);
+				rightDiv.appendChild(Activities);
+				rightDiv.appendChild(Features);
+				rightDiv.appendChild(Popularity);
+				card.appendChild(rightDiv);
+				return card;
+			}
+		
+			function applyFilters() {
+				let filterData = [];
+				if (stateItem == 'No Preference') {
+					filterData = cacheData;
+				}
+				if (stateItem && stateItem !== "No Preference") {
+					filterData = cacheData.filter((v) => {
+						return v.fields.State == stateItem;
+					})
+				}
+
+				if(!stateItem){
+					filterData = cacheData;
+				}
+
+				if (sortByItem == 'Alphabet') {
+					filterData = filterData.sort((a, b) => {
+						return a.fields.ParkName.localeCompare(b.fields.ParkName);
+					})
+				}
+				if (sortByItem == 'Popularity') {
+					filterData = filterData.sort((a, b) => {
+						return b.popularityVal - a.popularityVal;
+					})
+				}
+				console.log("filterData = ", filterData)
+				displayResults({ records: filterData });
+			}
+		
+			$(".sort-item").click(function () {
+				console.log("sort = ", $(this).text())
+				sortByItem = $(this).text();
+				applyFilters();
+
+			})
+			$(".dropdown-item").click(function () {
+				console.log("state = ", $(this).text())
+				stateItem = $(this).text();
+				applyFilters();
+			})
+
+
+		</script>
+
 </body>
+
 </html>

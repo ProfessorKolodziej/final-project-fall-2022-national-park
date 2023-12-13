@@ -32,11 +32,10 @@ to help you out.
 
 
 body { 
-	background: url('images/stephen-meyers-U43H95kjhog-unsplash.jpg'), lightgray 50% / cover no-repeat;
-	background-color: rgba(0, 50, 30, 0.85);
+	background-color: rgba(10, 40, 30, 0.80);
 	background-blend-mode: overlay;
 	background-size: 400%;                      
-    background-repeat:   no-repeat;
+    background-repeat: no-repeat;
     background-position: center center;     
 	margin: 0;
  }
@@ -61,6 +60,7 @@ body {
 	border-color: #28a745;
 	font-size: 12px;
 	margin-top: -2px;
+
   }
  
  
