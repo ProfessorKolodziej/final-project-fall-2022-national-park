@@ -65,18 +65,22 @@
 				<h2>Location/Climate</h2>
 				<ul class="list-group" id="list-group1">
 					<li class="list-group-item">
-						<input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
-						<label class="form-check-label stretched-link" for="firstCheckboxStretched">North (Cooler
-							Climate)</label>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+							<label class="form-check-label" for="flexRadioDefault1">
+								North (Cooler Climate)
+							</label>
 					</li>
 					<li class="list-group-item">
-						<input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
-						<label class="form-check-label stretched-link" for="secondCheckboxStretched">South (Warmer
-							Climate)</label>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+							<label class="form-check-label" for="flexRadioDefault2">
+								South (Warmer Climate)
+							</label>
 					</li>
 					<li class="list-group-item">
-						<input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
-						<label class="form-check-label stretched-link" for="thirdCheckboxStretched">No Preference</label>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+							<label class="form-check-label" for="flexRadioDefault3">
+								No Preference
+							</label>
 					</li>
 				</ul>
 			</div>
@@ -154,19 +158,15 @@
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched7">
-						<label class="form-check-label stretched-link" for="CheckboxStretched7">Stargazing</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched7">Fishing</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched8">
-						<label class="form-check-label stretched-link" for="CheckboxStretched8">Fishing</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched8">Horseback Riding</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched9">
-						<label class="form-check-label stretched-link" for="CheckboxStretched9">Horseback Riding</label>
-					</li>
-					<li class="list-group-item">
-						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched10">
-						<label class="form-check-label stretched-link" for="CheckboxStretched10">Climbing</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched9">Climbing</label>
 					</li>
 				</ul>
 			</div>
@@ -208,8 +208,8 @@
 			function saveFilters() {
 				let filters = {
 					LocationClimate: {
-						'North (Cooler Climate)': document.getElementById('firstCheckboxStretched').checked,
-						'South (Warmer Climate)': document.getElementById('secondCheckboxStretched').checked,
+						'North (Cooler Climate)': document.getElementById('flexRadioDefault1').checked,
+						'South (Warmer Climate)': document.getElementById('flexRadioDefault2').checked,
 					},
 					Features: {
 						'Historic Sites': document.getElementById('f1').checked,
@@ -226,15 +226,14 @@
 					},
 					Activities: {
 						'Biking': document.getElementById('CheckboxStretched1').checked,
-						'Wildlife Watching': document.getElementById('CheckboxStretched2').checked,
-						'Stargazing': document.getElementById('CheckboxStretched3').checked,
-						'Water Activities': document.getElementById('CheckboxStretched4').checked,
-						'Wildlife Viewing': document.getElementById('CheckboxStretched5').checked,
-						'Snow Activities': document.getElementById('CheckboxStretched6').checked,
-						'Hiking': document.getElementById('CheckboxStretched7').checked,
-						'Fishing': document.getElementById('CheckboxStretched8').checked,
-						'Horseback Riding': document.getElementById('CheckboxStretched9').checked,
-						'Climbing': document.getElementById('CheckboxStretched10').checked,
+						'Stargazing': document.getElementById('CheckboxStretched2').checked,
+						'Water Activities': document.getElementById('CheckboxStretched3').checked,
+						'Wildlife Viewing': document.getElementById('CheckboxStretched4').checked,
+						'Snow Activities': document.getElementById('CheckboxStretched5').checked,
+						'Hiking': document.getElementById('CheckboxStretched6').checked,
+						'Fishing': document.getElementById('CheckboxStretched7').checked,
+						'Horseback Riding': document.getElementById('CheckboxStretched8').checked,
+						'Climbing': document.getElementById('CheckboxStretched9').checked,
 					},
 					Popularity: {
 						'Very Popular': document.getElementById('1stCheckboxStretched').checked,
