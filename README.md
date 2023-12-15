@@ -1,14 +1,19 @@
-# Final Project (Replace with your project name)
+# National Park Finder
 
 ## Description
 
-Please add a brief description of your final project here.
+National Park Finder is a website aimed at helping travelers select a national park that aligns with their individual preferences and needs. With our filtering system, users can tailor their search for national parks based on activities, location/climate, features, and popularity. 
+
 
 ## Project Documentation
 
 - [CM523 Final Project Guidelines &amp; Schedule](https://docs.google.com/document/d/1gvG9_1XYfp5-BVUgCDL9JDaZ3Acm6hHP7lDF3MqXPzY/edit#heading=h.61wsleacz62i)
 - **Final code demo:** [Update this to show your Github Pages URL](https://professorkolodziej.github.io/cm523-final-project/). The URL will be `https://professorkolodziej.github.io/final-project-fall-2022-national-park/`.
 - Add any links to wireframes, mockups, your presentation, etc. here in a list so it is easy for you to find later.
+
+Presentation: https://docs.google.com/presentation/d/1OLyusDoiHlYtBMAyZi1ktMg1MI6IT88AMs92FCZ_PO8/edit#slide=id.p
+
+Figma: https://www.figma.com/file/KOTg4cA4NWhmI89xbUzKMK/Final-Project-Prototype-1?type=design&node-id=4490%3A1702&mode=design&t=PdA1HX2nx0jnN4az-1
 
 ## How to Use This Repository
 

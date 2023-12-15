@@ -147,9 +147,10 @@ to help you out.
 	  }
 
 	.content-container-text{
-		margin-left: -180px;
+		margin-left: 15px;
 		margin-right: 15px;
-		max-width: 300px;
+		max-width: 345px;
+		margin-top: -50px;
 	}
 	p {
 		max-width: 300px;
@@ -246,7 +247,7 @@ to help you out.
 	
 	.content-container-text {
 		margin-top: 200px;
-		margin-left: -155px;
+		margin-left: 25px;
 		width: 300px;
 	}
 	
@@ -260,13 +261,18 @@ to help you out.
 
 
 	p {
-		margin-left: 30px;
-		margin-top: -30px;
-		max-width: 280px;
+		margin-left: 40px;
+		margin-top: -80px;
+		max-width: 260px;
 
 	}
 
-
+	.p2 {
+		margin-top: -20px;
+	}
+	.p3 {
+		margin-top: -10px;
+	}
 }
 
 
