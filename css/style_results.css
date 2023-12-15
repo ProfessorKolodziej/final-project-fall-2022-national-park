@@ -24,45 +24,47 @@ to help you out.
 
 
 
-@media screen and (width >= 320px) {
+@media screen and (width >=375px) {
 	.content-container {
 		margin: 0 auto;
 
 	}
 
-	html {	
+	html {
 		margin: 0;
 		padding-bottom: 50px;
 		box-sizing: border-box;
 		width: 100%;
+		background: #ddd;
 	}
 	
-	
-	body{
+
+	body {
 		margin: 0;
-		box-sizing: border-box;
-		width: 100%;
+		padding: 0;
 	}
-	
+
 	nav {
 		width: 100%;
 	}
+
 	.navbar.navbar-expand-lg {
-		width: 100%; 
+		width: 100%;
 		padding-left: 30px;
 		gap: 30px;
 		position: fixed;
 		top: 0;
-		z-index: 100; /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+		z-index: 100;
+		/*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
 		height: 55px;
 	}
-	
+
 	svg {
 		margin-left: -30px;
 		margin-top: -5px;
 	}
-	
-	
+
+
 	strong {
 		font-size: 19px;
 		font-family: Archivo;
@@ -71,48 +73,56 @@ to help you out.
 		margin-left: -35px;
 		font-weight: 800px;
 	}
-	
+
 	.navbar-toggler {
 		border-color: lightgray;
 		background-color: white;
 		size: 50%;
 	}
-	
+
 	.navbar-toggler-icon {
-		font-size: 1rem; 
+		font-size: 1rem;
 	}
-	
+
 	.navbar-collapse {
-		background-color: #146C43; /* Change this to your desired color */
+		background-color: #146C43;
 	}
-	
-	
+
+
 	.nav-item1 {
 		margin-left: 30px;
 	}
-	
+
 	.nav-item2 {
 		margin-left: 30px;
 	}
-	
+
 	.nav-item3 {
 		margin-left: 30px;
 	}
-	
-	
+
+
 	.nav-link.active {
 		text-decoration: underline;
 		font-weight: bold;
 	}
 
-	.card.mb-3 {
-		margin-left: 26px;
-		margin-right: 26px;
+
+
+	.posts-list {
+		display: grid;
+		grid-template-columns: 1 fr;
 		margin-top: 15px;
 	}
 
+	.posts-list li {
+		border: 1px solid #ccc;
+		list-style-type: none;
+	}
+
 	body {
-		margin-top: 100px;
+		padding-top: 100px;
+		background: #eee;
 	}
 
 	h1 {
@@ -125,72 +135,100 @@ to help you out.
 		margin-top: -30px;
 		margin-left: 26px;
 		width: 100px;
-	
+
 	}
-	
-	
+
+
 	h1 {
 		position: absolute;
-	  }
-	  
+	}
+
 	h1::after {
 		content: " ";
 		display: block;
 		border-bottom: 3px solid #146C43;
-		width: 270px; 
+		width: 300px;
 		position: absolute;
 		top: 22px;
 		justify-content: center;
-	  }
-	
+	}
+
 	.p1 {
 		padding-top: 20px;
-		margin-left: 26px;
+		margin-left: 40px;
 	}
 
 	.btn-group {
-		margin-left: 100px;
+		margin-left: 130px;
 		margin-top: -85px;
 	}
 
 	.p2 {
-		margin-left: 26px; 
+		margin-left: 40px;
 		margin-top: -10px;
 	}
+	.p3 {
+		position: center;
+		padding: 30px;
+		margin-top: -10px;
+		margin-bottom: -30px;
+	}
+
 
 	.btn.btn-secondary.dropdown-toggle {
-		margin-left: 200px;
-		
+		margin-left: 250px;
+
 	}
 
 	.scrollable-dropdown {
-		max-height: 200px;
+		max-height: 250px;
 		overflow-y: auto;
-	  }
+	}
 
-.container{
-	margin-top: -70px;
-	margin-left: -55px;
-}
+	.container {
+		margin-top: -70px;
+	}
 
-.btn.btn-secondary.dropdown-toggle {
-	color: #146C43;
-	background-color: white;
-	margin-top: 0px;
-	margin-left: 200px;
-}
+	.btn.btn-secondary.dropdown-toggle {
+		color: #146C43;
+		background-color: white;
+		margin-top: 0px;
+		margin-left: 175px;
+	}
 
 	.btn.btn-outline-success {
 		margin-left: 180px;
+		
 	}
 
 
+	.card-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        word-wrap: break-word;
+        margin: 0 auto; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+        background: #fff; 
+        padding: 15px;
+    }
+
+    .card-item img {
+        width: 100%;
+        height: auto; 
+        object-fit: cover; 
 
 
-}	
+
+}
 
 
-@media screen and (width >= 1194px) {
+
+
+
+
+
+@media screen and (width >=768px) {
 	.content-container {
 		margin: 0 auto;
 	}
@@ -203,26 +241,12 @@ to help you out.
 		padding-right: 2000px;
 	}
 
-	strong {
-		display: none;
-	}
-
    svg {
 	margin-left: 0px;
+	margin-top: 5px;
    }
 
-	.nav-item1 {
-		margin-left: 20px;
-	}
-   
-	.nav-item2 {
-		margin-left: 30px;
-	}
-   
-	.nav-item3 {
-		margin-left: 30px;
-	}
-   
+
    
 	.nav-link.active {
 		text-decoration: underline;
@@ -230,15 +254,27 @@ to help you out.
 	}
    
    .navbar-toggler {
-		display: none;
+		margin-left: 620px;
+		margin-top: -30px;
    }
+
+   .collapse.navbar-collapse {
+	margin-left: 600px;
+	padding-right: 50px;
+}
+
+	strong {
+		display: none;
+	}
+
+
 
 	h1 {
 		font-family: Archivo;
 		font-size: 40px;
 		color: #146C43;
-		margin-top: 20px;
 		margin-left: 116px;
+		margin-top: 20px;
 	}
    
    
@@ -250,98 +286,145 @@ to help you out.
 		content: " ";
 		display: block;
 		border-bottom: 3px solid #146C43;
-		width: 964px;
+		width: 520px;
 		position: absolute;
 		top: 50px;
 		justify-content: center;
 	  }
+   
 
 
 
 
 	.p1 {
 		position: absolute;
-		margin-top: 98px;
-		margin-left: 450px;
-	 }
-	 
-	 
-	 .btn.btn-success {
-		margin-top: 195px;
-		margin-left: 440px;
-	 }
-	 
-	 
-	 
-	 
-	
-	 .p2 {
-		margin-top: -30px;
-		margin-left: 770px;
-	 }
-	 
-	 
-	 
-	 
-	 .dropdown {
-		margin-top: -48px;
-		margin-left: 900px;
-	 
-	 }
-	 
-	 
-	 .btn.dropdown-toggle{
-		color:  #146C43;
-	 }
-	 
-	 
-	 
-	 
-	 .card.mb-3 {
-		margin-left: 115px;
-		margin-right: 115px;
-		margin-top: 30px;
+		margin-top: 80px;
+		margin-left: 300px;
 	}
-	 
-	 .img-fluid.rounded-start {
-		width: 100%;
-		height: 20vw;
-		object-fit: cover;
-		padding-right: 10px;
-	 }
-	 
-	 
-	 .btn.btn-outline-success {
-		margin-left: 965px;
-	 }
-	 
-	 .btn.btn-secondary.dropdown-toggle {
+
+
+	.btn.btn-success {
+		margin-top: 175px;
+		margin-left: 240px;
+	}
+
+
+
+
+
+	.p2 {
+		margin-top: 20px;
+		margin-left: 300px;
+	}
+
+	.p3 {
+		padding-left: 100px;
+		padding-right: 100px;
+
+	}
+
+
+	.dropdown {
+		margin-top: -48px;
+		margin-left: 522px;
+
+	}
+
+
+	.btn.dropdown-toggle {
 		color: #146C43;
-		background-color: white;
+	}
+
+
+
+
+
+
+
+	.btn.btn-outline-success {
+		margin-left: 560px;
+	}
+
+	.btn.btn-secondary.dropdown-toggle {
+		margin-left: -130px;
 		margin-top: 47px;
-		margin-left: 50px;
+
+	}
+
+	.card-item {
+		display: flex;
+		flex-direction: row;
+
+	}
+	
+	.card-item img {
+		width: 100%;
+		height: auto;
 	}
 
 }
 
 
-@media screen and (width >= 1280px) {
+@media screen and (width >=1024px) {
 	.content-container {
 		margin: 0 auto;
 		max-width: 1280px;
+	}
+
+	strong {
+		display: none;
+	}
+	.navbar.navbar-expand-lg {
+		padding-left: 60px;
+		gap: 30px;
+		z-index: 100; /*Reference: https://stackoverflow.com/questions/53993008/how-to-keep-fixed-nav-bar-in-front-and-not-behind-page-elements/ */
+	}
+	svg {
+		margin-left: -30px;
+		margin-top: 0px;
+	   }
+	
+	.nav-item1 {
+		margin-left: -570px;
+	}
+	
+	.nav-item2 {
+		margin-left: 30px;
+	}
+	
+	.nav-item3 {
+		margin-left: 30px;
+	}
+	
+	
+	.nav-link.active {
+		text-decoration: underline;
+		font-weight: bold;
 	}
  
 	h1::after {
 		content: " ";
 		display: block;
 		border-bottom: 3px solid #146C43;
-		width: 1048px;
+		width: 800px;
 		position: absolute;
 		top: 50px;
 		justify-content: center;
 	  }
 
-	
+	.p1 {
+		margin-left: 500px;
+	}
+
+	.p2 {
+		margin-left: 500px;
+	}
+
+	.p3 {
+		margin-left: 100px;
+		margin-top: -10px;
+	}
+
 	.container {
 		margin-left: 185px;
 	}
@@ -351,14 +434,39 @@ to help you out.
 	}
 
 	.btn.btn-outline-success {
-		margin-left: 1050px;
-	 }
+		margin-left: 800px;
+	}
 
-	 .btn.btn-secondary.dropdown-toggle {
+	.btn.btn-secondary.dropdown-toggle {
 		color: #146C43;
 		background-color: white;
-		margin-left: -180px;
+		margin-left: -90px;
 	}
 
 }
- 
+
+.card-item{
+	display: flex;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 90vw;
+	margin: auto;
+	margin-top: 30px;
+}
+.card-item img{
+	width: 300px;
+
+}
+
+.card-right{
+	flex: 1;
+	background: white;
+	padding: 20px;
+}
+
+.data-list{
+	padding-left: 0;
+}
+
+}

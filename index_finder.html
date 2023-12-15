@@ -14,13 +14,14 @@
 	<link rel="stylesheet" href="css/style_finder.css">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Roboto:wght@300;700&display=swap');
-		</style>		
+	</style>
 	<title>National Park Finder</title>
 	<!--
 		This is where you should link your CSS file.
 	-->
 </head>
-<body>
+
+<body background="images/Rectangle-175.png">
 	<nav class="navbar navbar-expand-lg" style="background-color: #146C43;">
 		<div class="container-fluid">
 			<a href="index.html" style="color: white">
@@ -31,7 +32,7 @@
 				</svg>
 			</a>
 			<strong style="color: white;"> National Park Finder </strong>
-	
+
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -52,157 +53,203 @@
 			</div>
 		</div>
 	</nav>
-	
+
 
 
 	<h1>Finder</h1>
-	
+
 
 	<main class="content-container">
 		<section class="container">
-		<div class="list-group-1">
-			<h2>Location/Climate</h2>
-		<ul class="list-group" id="list-group1">
-			<li class="list-group-item">
-			  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
-			  <label class="form-check-label stretched-link" for="firstCheckboxStretched">North (Cooler Climate)</label>
-			</li>
-			<li class="list-group-item">
-			  <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
-			  <label class="form-check-label stretched-link" for="secondCheckboxStretched">South (Warmer Climate)</label>
-			</li>
-			<li class="list-group-item">
-			  <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
-			  <label class="form-check-label stretched-link" for="thirdCheckboxStretched">No Preference</label>
-			</li>
-		  </ul>
-		</div>
-		<div class="list-group-2">
-			<h2>Features</h2>
-		<ul class="list-group" id="list-group2">
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="fourthCheckboxStretched">
-				<label class="form-check-label stretched-link" for="fourthCheckboxStretched">Caves</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="fifthCheckboxStretched">
-				<label class="form-check-label stretched-link" for="fifthCheckboxStretched">Coastal Area</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="sixthCheckboxStretched">
-				<label class="form-check-label stretched-link" for="sixthCheckboxStretched">Desert Landscape</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="seventhCheckboxStretched">
-				<label class="form-check-label stretched-link" for="seventhCheckboxStretched">Fall Foliage</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="eighthCheckboxStretched">
-				<label class="form-check-label stretched-link" for="eighthCheckboxStretched">Glacier</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="ninthCheckboxStretched">
-				<label class="form-check-label stretched-link" for="ninthCheckboxStretched">Historic Sites</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="tenthCheckboxStretched">
-				<label class="form-check-label stretched-link" for="tenthCheckboxStretched">Hot Springs</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="eleventhCheckboxStretched">
-				<label class="form-check-label stretched-link" for="eleventhCheckboxStretched">Volcanoes</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="twelvethCheckboxStretched">
-				<label class="form-check-label stretched-link" for="twelvethCheckboxStretched">Waterfalls</label>
-			</li>
-			<li class="list-group-item">
-				<input class="form-check-input me-1" type="checkbox" value="" id="thirteenthCheckboxStretched">
-				<label class="form-check-label stretched-link" for="thirteenthCheckboxStretched">No Preference</label>
-			</li>
-			</ul>
-		</div>
+			<div class="list-group-1">
+				<h2>Location/Climate</h2>
+				<ul class="list-group" id="list-group1">
+					<li class="list-group-item">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+							<label class="form-check-label" for="flexRadioDefault1">
+								North (Cooler Climate)
+							</label>
+					</li>
+					<li class="list-group-item">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+							<label class="form-check-label" for="flexRadioDefault2">
+								South (Warmer Climate)
+							</label>
+					</li>
+					<li class="list-group-item">
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+							<label class="form-check-label" for="flexRadioDefault3">
+								No Preference
+							</label>
+					</li>
+				</ul>
+			</div>
+			<div class="list-group-2">
+				<h2>Features</h2>
+				<ul class="list-group" id="list-group2">
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f1">
+						<label class="form-check-label stretched-link" for="f1">Historic Sites</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f2">
+						<label class="form-check-label stretched-link" for="f2">Coastal Area</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f3">
+						<label class="form-check-label stretched-link" for="f3">Fall Foliage</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f4">
+						<label class="form-check-label stretched-link" for="f4">Caves</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f5">
+						<label class="form-check-label stretched-link" for="f5">Desert Landscape</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f6">
+						<label class="form-check-label stretched-link" for="f6">Cultural Education</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f7">
+						<label class="form-check-label stretched-link" for="f7">Glaciers</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f8">
+						<label class="form-check-label stretched-link" for="f8">Hot Springs</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f9">
+						<label class="form-check-label stretched-link" for="f9">Volcanoes</label>
+					</li>
+					<li class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="" id="f10">
+						<label class="form-check-label stretched-link" for="f10">Waterfalls</label>
+					</li>
+				</ul>
+			</div>
 			<div class="list-group-3">
 				<h2>Activities</h2>
 				<ul class="list-group" id="list-group3">
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched1">
 						<label class="form-check-label stretched-link" for="CheckboxStretched1">Biking</label>
-					  </li>
-					  <li class="list-group-item">
+					</li>
+					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched2">
-						<label class="form-check-label stretched-link" for="CheckboxStretched2">Camping</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched2">Stargazing</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched3">
-						<label class="form-check-label stretched-link" for="CheckboxStretched3">Fishing</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched3">Water Activities</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched4">
-						<label class="form-check-label stretched-link" for="CheckboxStretched4">Hiking</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched4">Wildlife Viewing</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched5">
-						<label class="form-check-label stretched-link" for="CheckboxStretched5">Horseback Riding</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched5">Snow Activities</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched6">
-						<label class="form-check-label stretched-link" for="CheckboxStretched6">Rock Climbing</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched6">Hiking</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched7">
-						<label class="form-check-label stretched-link" for="CheckboxStretched7">Stargazing</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched7">Fishing</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched8">
-						<label class="form-check-label stretched-link" for="CheckboxStretched8">Snow Activities</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched8">Horseback Riding</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched9">
-						<label class="form-check-label stretched-link" for="CheckboxStretched9">Water Activities</label>
-					</li>
-					<li class="list-group-item">
-						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched10">
-						<label class="form-check-label stretched-link" for="CheckboxStretched10">Wildlife Viewing</label>
-					</li>
-					<li class="list-group-item">
-						<input class="form-check-input me-1" type="checkbox" value="" id="CheckboxStretched11">
-						<label class="form-check-label stretched-link" for="CheckboxStretched11">No Preference</label>
+						<label class="form-check-label stretched-link" for="CheckboxStretched9">Climbing</label>
 					</li>
 				</ul>
 			</div>
 			<div class="list-group-4">
 				<h2>Popularity</h2>
-				<ul class="list-group" id="list-group1">
+				<ul class="list-group" id="list-group4">
 					<li class="list-group-item">
-					  <input class="form-check-input me-1" type="checkbox" value="" id="1stCheckboxStretched">
-					  <label class="form-check-label stretched-link" for="1stCheckboxStretched"> Very Popular </label>
+						<input class="form-check-input me-1" type="checkbox" value="" id="1stCheckboxStretched">
+						<label class="form-check-label stretched-link" for="1stCheckboxStretched"> Very Popular </label>
 					</li>
 					<li class="list-group-item">
-					  <input class="form-check-input me-1" type="checkbox" value="" id="2ndCheckboxStretched">
-					  <label class="form-check-label stretched-link" for="2ndCheckboxStretched">Somewhat Popular</label>
+						<input class="form-check-input me-1" type="checkbox" value="" id="2ndCheckboxStretched">
+						<label class="form-check-label stretched-link" for="2ndCheckboxStretched">Somewhat
+							Popular</label>
 					</li>
 					<li class="list-group-item">
-					  <input class="form-check-input me-1" type="checkbox" value="" id="3rdCheckboxStretched">
-					  <label class="form-check-label stretched-link" for="3rdCheckboxStretched">Less Crowded</label>
+						<input class="form-check-input me-1" type="checkbox" value="" id="3rdCheckboxStretched">
+						<label class="form-check-label stretched-link" for="3rdCheckboxStretched">Less Crowded</label>
 					</li>
 					<li class="list-group-item">
 						<input class="form-check-input me-1" type="checkbox" value="" id="4thCheckboxStretched">
 						<label class="form-check-label stretched-link" for="4thCheckboxStretched">No Preference</label>
-					  </li>
-				  </ul>
+					</li>
+				</ul>
 			</div>
 
 		</section>
 	</main>
-	<!--
+	<button type="button" class="btn btn-success" onclick="saveFilters()">Submit</button>
+	<a href="index_finder.html" button type="button" class="btn btn-outline-success"> Reset </a>
+		<!--
 		This is where you should link your JS file.
 	-->
-		<a href="index_results.html" button type="button" class="btn btn-success"> Submit </button>
-		<a href="index_finder.html" button type="button" class="btn btn-outline-success"> Reset </button>
+		<script src="scripts_finder.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script>
+			function saveFilters() {
+				let filters = {
+					LocationClimate: {
+						'North (Cooler Climate)': document.getElementById('flexRadioDefault1').checked,
+						'South (Warmer Climate)': document.getElementById('flexRadioDefault2').checked,
+					},
+					Features: {
+						'Historic Sites': document.getElementById('f1').checked,
+						'Coastal Area': document.getElementById('f2').checked,
+						'Fall Foliage': document.getElementById('f3').checked,
+						'Caves': document.getElementById('f4').checked,
+						'Desert Landscape': document.getElementById('f5').checked,
+						'Cultural Education': document.getElementById('f6').checked,
+						'Glaciers': document.getElementById('f7').checked,
+						'Hot springs': document.getElementById('f8').checked,
+						'Volcanoes': document.getElementById('f9').checked,
+						'Waterfalls': document.getElementById('f10').checked,
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+					},
+					Activities: {
+						'Biking': document.getElementById('CheckboxStretched1').checked,
+						'Stargazing': document.getElementById('CheckboxStretched2').checked,
+						'Water Activities': document.getElementById('CheckboxStretched3').checked,
+						'Wildlife Viewing': document.getElementById('CheckboxStretched4').checked,
+						'Snow Activities': document.getElementById('CheckboxStretched5').checked,
+						'Hiking': document.getElementById('CheckboxStretched6').checked,
+						'Fishing': document.getElementById('CheckboxStretched7').checked,
+						'Horseback Riding': document.getElementById('CheckboxStretched8').checked,
+						'Climbing': document.getElementById('CheckboxStretched9').checked,
+					},
+					Popularity: {
+						'Very Popular': document.getElementById('1stCheckboxStretched').checked,
+						'Somewhat Popular': document.getElementById('2ndCheckboxStretched').checked,
+						'Less Crowded': document.getElementById('3rdCheckboxStretched').checked,
+					}
+				};
+
+				localStorage.setItem('parkFilters', JSON.stringify(filters));
+				window.location.href = 'index_results.html';
+			}
+				//asked ChatGPT: How do you link filter selections to the results page
+		</script>
+
+
+
 </body>
+
 </html>
